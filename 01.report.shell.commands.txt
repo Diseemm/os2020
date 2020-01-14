@@ -1,0 +1,92 @@
+Practical work 1: Basic Command.
+
+1) Command: echo Hello World
+   Output: Hello World
+   Comment: to print "Hello World" on the display of the terminal.
+
+2) Command: passwd
+   Output: Changing password for raydi.
+	   (current) UNIX password: 
+	   Enter new UNIX password: 
+ 	   Retype new UNIX password: 
+   Comment: to change the current password of the system.
+
+3) Command: date
+   Output: Tue Jan 14 10:23:13 +07 2020
+   Comment: to print the current date and time of today.
+
+4) Command: hostname
+   Output: Laptop
+   Command: to print the name of the system.
+
+5) Command: arch
+   Output: x86_64
+   Comment: to print the computer's architecture
+
+6) Command: uname -a
+   Output: Linux Laptop 5.0.0-37-generic #40~18.04.1-Ubuntu SMP Thu Nov 14 12:06:39 UTC 2019 x86_64 x86_64 x86_64 GNU/Linux
+   Comment: to print the name of the kernel, network node host name, kernel version number and release level, kernel release date, machine hardware name, CPU type, hardware platform and operating system name onto the terminal display.
+
+7) Command: dmesg
+   Output: [ 6268.760276] wlp2s0: authenticated
+	   [ 6268.772690] wlp2s0: associate with b4:fb:e4:41:03:1b (try 1/3)
+	   [ 6268.793028] wlp2s0: RX AssocResp from b4:fb:e4:41:03:1b (capab=0x431 status=0 aid=8)
+	   [ 6268.793564] wlp2s0: associated
+	   [ 6268.795994] broken atomic modeset userspace detected, disabling atomic
+	   [ 6268.805409] IPv6: ADDRCONF(NETDEV_CHANGE): wlp2s0: link becomes ready
+	   [ 6312.932367] rfkill: input handler disabled
+	   [ 6807.816708] perf: interrupt took too long (5293 > 5233), lowering kernel.perf_event_max_sample_rate to 37750
+	   [ 7032.809670] audit: type=1400 audit(1578966607.291:40): apparmor="DENIED" operation="open" profile="/usr/bin/evince-thumbnailer" name="/tmp/tumbler-XJYMWD0.png" pid=18920 comm="evince-thumbnai" requested_mask="wc" denied_mask="wc" fsuid=1000 ouid=1000
+	   [ 7035.308377] audit: type=1400 audit(1578966609.792:41): apparmor="DENIED" operation="open" profile="/usr/bin/evince-thumbnailer" name="/tmp/tumbler-XPRU5D0.png" pid=18924 comm="evince-thumbnai" requested_mask="wc" denied_mask="wc" fsuid=1000 ouid=1000
+    Comment: to print the message buffer of the kernel onto the terminal display.
+
+8) Command: uptime
+   Output:  10:05:04 up 1 day, 52 min,  1 user,  load average: 1,08, 0,85, 0,83
+   Comment: to print out onto the display of the terminal how long the system is active (running).
+ 
+9) Command: who am i
+   Output: None is printed.
+   Comment: My system is Ubuntu based.
+
+10) Command: whoami
+    Output: raydi
+    Comment: to print onto the display of the terminal the username of the current user.
+
+11) Command: who
+    Output: raydi    tty7         2020-01-13 09:13 (:0)
+    Comment: to print onto the display of the terminal a list of users who are currently logged into the computer.
+
+12) Command: id
+    Output: uid=1000(raydi) gid=1000(raydi) groups=1000(raydi),4(adm),24(cdrom),27(sudo),30(dip),46(plugdev),118(lpadmin),128(sambashare)
+    Comment: to print onto the display of the terminal the real and effective User ID (UID) and Group ID (GID).
+
+13) Command: last
+    Output: raydi    tty7         :0               Mon Jan 13 09:13    gone - no logout
+	    reboot   system boot  5.0.0-37-generic Mon Jan 13 16:12   still running
+	    raydi    tty7         :0               Sat Jan 11 09:13 - 11:49  (02:35)
+	    reboot   system boot  5.0.0-37-generic Sat Jan 11 16:13 - 11:49  (-4:23)
+	    raydi    tty7         :0               Fri Jan 10 23:04 - 23:24  (00:20)
+	    reboot   system boot  5.0.0-37-generic Sat Jan 11 06:01 - 23:24  (-6:36)
+	    raydi    tty7         :0               Fri Jan 10 13:41 - 15:46  (02:04)
+	    reboot   system boot  5.0.0-37-generic Fri Jan 10 20:41 - 15:46  (-4:54)
+	    raydi    tty7         :0               Fri Jan 10 09:41 - 12:53  (03:11)
+	    reboot   system boot  5.0.0-37-generic Fri Jan 10 16:40 - 12:54  (-3:46)
+	    raydi    tty7         :0               Fri Jan 10 08:50 - 09:40  (00:49)
+	    reboot   system boot  5.0.0-37-generic Fri Jan 10 15:49 - 09:40  (-6:09)
+	    raydi    tty7         :0               Thu Jan  9 21:29 - 23:12  (01:43)
+	    reboot   system boot  5.0.0-37-generic Fri Jan 10 04:28 - 23:14  (-5:14)
+
+	    wtmp begins Fri Jan 10 04:28:52 2020
+    Comment: to print onto the display of the terminal the list of all the users logged in and out since the file /var/log/wtmp was created.
+
+14) Command: finger
+    Output: Login     Name       Tty      Idle  Login Time   	   Office     Office Phone
+	    raydi     Raydi      tty7       1d  Jan 13 09:13 (:0)
+    Comment: to print onto the display of the terminal information about computer users.
+
+15) Command: w
+    Output: 10:15:51 up 1 day,  1:03,  1 user,  load average: 0,40, 0,62, 0,75
+	    USER     TTY      FROM             LOGIN@   IDLE   JCPU   PCPU WHAT
+	    raydi    tty7     :0                T209   25:02m 12:30   0.37s /usr/lib/gnome-session/gnome-session-binary --s
+    Comment: to print onto the display of the terminal a quick summary of every user logged into a computer, what each user is currently doing, and what load all the activity is imposing on the computer itself.
+
