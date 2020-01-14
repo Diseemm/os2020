@@ -1,0 +1,31 @@
+Practical work 2: Pipe and I/O Redirection
+
+1) Command: ls 
+   Output: 01.report.shell.commands.txt
+   Comment: to list all the file name inside a folder.
+
+   Command: ls | grep 01
+   Output: 01.report.shell.commands.txt with 01 is being highlighted with different color.
+   Comment: to prints any lines which match a specified pattern.
+
+2) Command: wc /etc/passwd
+   Output:   41   73 2479 /etc/passwd
+   Comment: to print onto display of the terminal how many lines that /etc/passwd has.
+
+3) Command: free
+   Output: 		total        
+		Mem:        3978432      
+		Swap:       2097148      
+   Comment: to print onto the display of the terminal how much memory that my machine has, not free memory.
+
+4) Command: cat /proc/cpuinfo 
+   Output: model name	: Intel(R) Core(TM) i5-2430M CPU @ 2.40GHz
+ 	   core id	: 1
+	   cpu cores	: 2
+   Comment: Find how many logical core that my CPU has.
+
+5) Command: find *jpg | wc
+   Output:             2       2      21
+   Comment: to print onto the display of the terminal how many .jpg files inside a folder. In my case, there are 2 images. 
+
+
