@@ -1,0 +1,58 @@
+Practical work 3: Process control from shell
+
+1) Command: ps -aux
+   Output: root     28911  0.0  0.1  47996  4872 pts/9    Ss+  10:26   0:00 /bin/bash
+	   root     28943  0.0  0.0      0     0 ?        I<   10:26   0:00 [kworker/1:2H-ev]
+	   root     29009  0.0  0.0      0     0 ?        I    10:26   0:00 [kworker/u16:1]
+	   root     29025  1.5  2.6 700880 106008 pts/7   Sl   10:27   0:01 /usr/share/code/code --type=renderer --disable-
+	   raydi    29054  1.1  1.8 744004 74948 ?        Sl   10:27   0:00 /opt/google/chrome/chrome --type=renderer --dis
+	   raydi    29069  2.8  2.5 754104 99568 ?        Sl   10:28   0:01 /opt/google/chrome/chrome --type=renderer --dis
+	   raydi    29104  0.3  1.7 720060 67992 ?        Sl   10:28   0:00 /opt/google/chrome/chrome --type=renderer --dis
+	   raydi    29116  0.3  1.6 718012 65720 ?        Sl   10:28   0:00 /opt/google/chrome/chrome --type=renderer --dis
+	   raydi    29131  0.2  1.1 701300 44592 ?        Sl   10:28   0:00 /opt/google/chrome/chrome --type=renderer --dis
+	   raydi    29155  0.0  0.0  65280  3552 pts/8    R+   10:29   0:00 ps -aux
+    Comment: to list all my running process.
+
+2) Command: gnome-calculator
+   Output: On-screen display, gnome-calculator's opened.
+   Comment: start a new process, in this case it's gnome-calculator.
+
+3) Command: ps -aux | grep gnome-calculator
+   Output: raydi     1723  0.1  1.0 704296 41044 pts/4    Sl+  10:53   0:00 gnome-calculator
+	   raydi     3095  0.0  0.0  40044  1000 pts/7    S+   11:02   0:00 grep --color=auto gnome-calculator
+	(gnome-calculator in difference color)
+           PID: 1723 - 3095
+   Comment: to find ID of newly-created process.
+
+4) Command: cat /proc/1723/status
+   Output: Name:	gnome-calculato
+	   Umask:	0002
+	   State:	S (sleeping)
+	   Tgid:	1723
+	   Ngid:	0
+	   Pid:		1723
+	   PPid:	1653
+	   TracerPid:	0
+	   Uid:		1000	1000	1000	1000
+	   Gid:		1000	1000	1000	1000
+	   FDSize:	256
+    Comment: Show gnome-calculator status.
+
+5) Command: kill -STOP 1723
+   Output: gnome-calculator has been paused. On terminal, it showed: "[1]+  Stopped                 gnome-calculator"
+   Comment: to Pause a process.
+
+6) Command: kill -CONT 1723
+   Output: gnome-calculator continues to work. 
+   Comment: to Resume a process.
+
+7) Command: kill KILL 1723
+   Output: gnome-calculator has been stopped. On Terminated, it showed: "Terminated".
+   Comment: to Terminate it.
+
+
+
+6) Command: kill
+
+   
+
