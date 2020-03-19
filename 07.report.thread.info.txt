@@ -1,0 +1,10 @@
+Practical work 6: Get thread information
+
+1) Command: ps -A | grep firefox
+   Output:  7198 tty2     00:00:18 firefox
+    
+   Command: ps -o nlwp 7198
+   Output: 
+	NLWP
+	  59
+

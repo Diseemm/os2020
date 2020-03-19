@@ -1,0 +1,55 @@
+Practical work 5: Get scheduler information 
+
+1) Command: cat /proc/sched_debug | grep systemd
+	    or cat /proc/sched_debug | grep systemd | awk '{print $5}'	<-- this comment print out switches only.
+   Output:
+	 S        systemd   969        66.189748       154   120         0.000000       159.704997         0.000000 0 0 /autogroup-69
+	 Ssystemd-resolve   763       274.026657      1656   120         0.000000       917.130771         0.000000 0 0 /autogroup-33
+	 Ssystemd-journal   336       214.931136      2224   119         0.000000       870.663529         0.000000 0 0 /autogroup-10
+	 Ssystemd-timesyn   762        48.241976       181   120         0.000000        85.256469         0.000000 0 0 /autogroup-32
+	 S        systemd     1      1401.317908    108461   120         0.000000      6422.438755         0.000000 0 0 /autogroup-2
+	 S  systemd-udevd   357      1181.584093      1100   120         0.000000      1496.847604         0.000000 0 0 /autogroup-16
+	 S systemd-logind   856       103.394403      9474   120         0.000000       521.930850         0.000000 0 0 /autogroup-53
+	 S        systemd  1355        97.581837       223   120         0.000000       270.214260         0.000000 0 0 /autogroup-92
+
+	9754
+	154
+	120
+	119
+	120
+	108953
+	1100
+	223
+
+2) Command: ps -A | grep systemd
+   Output: 
+	    1 ?        00:00:06 systemd
+	  336 ?        00:00:00 systemd-journal
+	  357 ?        00:00:01 systemd-udevd
+	  762 ?        00:00:00 systemd-timesyn
+	  763 ?        00:00:00 systemd-resolve
+	  856 ?        00:00:00 systemd-logind
+	  969 ?        00:00:00 systemd
+	 1355 ?        00:00:00 systemd
+
+	For ID 1:
+   Command: grep switches /proc/1/sched
+   Output: 
+	nr_switches                                  :               116123
+	nr_voluntary_switches                        :               115266
+	nr_involuntary_switches                      :                  857
+	
+	For ID 969:
+   Command: grep switches /proc/969/sched
+   Output: 
+	nr_switches                                  :                  154
+	nr_voluntary_switches                        :                   84
+	nr_involuntary_switches                      :                   70
+
+	For ID 1355:
+   Command: grep switches /proc/1355/sched
+   Output: 
+	nr_switches                                  :                  223
+	nr_voluntary_switches                        :                  192
+	nr_involuntary_switches                      :                   31
+
